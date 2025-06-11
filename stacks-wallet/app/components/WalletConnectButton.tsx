@@ -24,7 +24,6 @@ export const WalletConnectButton = () => {
     
     checkConnection();
 
-    // Close dropdown when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setShowDropdown(false);
@@ -44,6 +43,8 @@ export const WalletConnectButton = () => {
       const response = await connect();
       console.log('Wallet connected:', response);
       setIsWalletConnected(true);
+
+      window.location.reload();
     } catch (err) {
       console.error('Error connecting wallet:', err);
       setError('Failed to connect wallet. Please try again.');
@@ -57,6 +58,8 @@ export const WalletConnectButton = () => {
       disconnect();
       setIsWalletConnected(false);
       setShowDropdown(false);
+
+      window.location.reload();
     } catch (err) {
       console.error('Error disconnecting wallet:', err);
       setError('Failed to disconnect wallet. Please try again.');
@@ -77,7 +80,7 @@ export const WalletConnectButton = () => {
         {showDropdown && (
           <div className="absolute right-0 mt-1 w-40 bg-white border border-gray-200 shadow-md rounded-sm z-10">
             <button
-              className="w-full text-left px-4 py-2 text-red-500 hover:bg-gray-50 transition-colors text-sm"
+              className="w-full text-left px-4 py-2 text-red-500 hover:bg-gray-50 transition-colors text-sm cursor-pointer"
               onClick={handleDisconnect}
             >
               Disconnect
