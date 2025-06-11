@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { connect, disconnect, getLocalStorage, isConnected } from '@stacks/connect';
+import { connect, disconnect, isConnected } from '@stacks/connect';
 
 export const WalletConnectButton = () => {
   const [isConnecting, setIsConnecting] = useState(false);
@@ -64,8 +64,6 @@ export const WalletConnectButton = () => {
   };
 
   if (isWalletConnected) {
-    const userData = getLocalStorage()
-    console.log(userData)
     return (
       <div className="relative" ref={dropdownRef}>
         <button
