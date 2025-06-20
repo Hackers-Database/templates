@@ -1,7 +1,7 @@
 ---
 title: "Stacks | Wallet Integration"
 slug: "stacks-wallet"
-preview_url: "https://stacks-wallet.vercel.app"
+preview_url: "https://stacks-wallet.hackdb.tech"
 tags: ["Stacks", "Stacks Connect", "Next.js", "Wallet Integration"]
 repo: "https://github.com/Hackers-Database/templates"
 subdir: "stacks-wallet"
