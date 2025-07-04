@@ -5,6 +5,12 @@
     "repo": "https://github.com/Hackers-Database/templates",
     "subdir": "stacks-wallet"
   },
+  "flow-rainbowkit-wallet": {
+    "name": "Flow | RainbowKit Wallet Integration",
+    "description": "Basic Flow dApp template with RainbowKit wallet integration.",
+    "repo": "https://github.com/Hackers-Database/templates",
+    "subdir": "flow-rainbowkit-wallet"
+  },
   "evm-rainbowkit-wallet": {
     "name": "EVM | RainbowKit Wallet Integration",
     "description": "Basic EVM dApp template with RainbowKit wallet integration.",
